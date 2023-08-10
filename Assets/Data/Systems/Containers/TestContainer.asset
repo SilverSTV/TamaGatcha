@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f951912fceea14781510d5b36a3aba, type: 3}
+  m_Name: TestContainer
+  m_EditorClassIdentifier: 
+  animals:
+  - foodPercent: 0.9609996
+    age: 3
+    daysOfLife: 352
+    sleepingDate: 0
+    spawnDate: 49
+    animalTypeSo: {fileID: 11400000, guid: efaf4c3ee31d92944aa750302e8cefa2, type: 2}
+    foodConsumptionP: 0
+    stageNumber: 1
+    isDead: 0
+    animalName: Aboba
+    foodAmount: 96.09996
+    healthCount: 0
+    happiness: 0
+  - foodPercent: 0
+    age: 10
+    daysOfLife: 1023
+    sleepingDate: 10
+    spawnDate: 0
+    animalTypeSo: {fileID: 11400000, guid: efaf4c3ee31d92944aa750302e8cefa2, type: 2}
+    foodConsumptionP: 0
+    stageNumber: 1
+    isDead: 1
+    animalName: Mister
+    foodAmount: 0
+    healthCount: 100
+    happiness: 0
+  currentAnimal:
+    foodPercent: 0.9609996
+    age: 3
+    daysOfLife: 352
+    sleepingDate: 0
+    spawnDate: 49
+    animalTypeSo: {fileID: 11400000, guid: efaf4c3ee31d92944aa750302e8cefa2, type: 2}
+    foodConsumptionP: 0
+    stageNumber: 1
+    isDead: 0
+    animalName: Aboba
+    foodAmount: 96.09996
+    healthCount: 0
+    happiness: 0
+  inactiveAnimals:
+  - foodPercent: 0
+    age: 3
+    daysOfLife: 379
+    sleepingDate: 11
+    spawnDate: 0
+    animalTypeSo: {fileID: 11400000, guid: a6516459d0f968f4384323b925b1ce16, type: 2}
+    foodConsumptionP: 0
+    stageNumber: 1
+    isDead: 1
+    animalName: Coco
+    foodAmount: 0
+    healthCount: 100
+    happiness: 0
+  - foodPercent: 0
+    age: 4
+    daysOfLife: 433
+    sleepingDate: 0
+    spawnDate: 21
+    animalTypeSo: {fileID: 11400000, guid: a6516459d0f968f4384323b925b1ce16, type: 2}
+    foodConsumptionP: 0
+    stageNumber: 1
+    isDead: 1
+    animalName: Lol
+    foodAmount: 0
+    healthCount: 0
+    happiness: 0
