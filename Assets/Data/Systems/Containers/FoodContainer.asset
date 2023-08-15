@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   container:
   - foodType: {fileID: 11400000, guid: b6439c4dff1d7f640b61804987dd3aaf, type: 2}
-    amount: 2
+    amount: 15
   - foodType: {fileID: 11400000, guid: 079aeb2e3a8b41448b4570def44dd40e, type: 2}
-    amount: 2
-  - foodType: {fileID: 11400000, guid: 40c01347610c3c64aaaa91e4b702d43b, type: 2}
-    amount: 1
+    amount: 13
   - foodType: {fileID: 11400000, guid: e195d0c71d991eb45bb0bed32f058a00, type: 2}
-    amount: 1
+    amount: 9
   - foodType: {fileID: 11400000, guid: f9773e48c2f704c499ce73c6c54aed5b, type: 2}
+    amount: 10
+  - foodType: {fileID: 11400000, guid: 40c01347610c3c64aaaa91e4b702d43b, type: 2}
     amount: 1
