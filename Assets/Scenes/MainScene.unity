@@ -643,13 +643,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1237542400}
-        m_TargetAssemblyTypeName: InterfaceManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 2
+      - m_Target: {fileID: 1237542405}
+        m_TargetAssemblyTypeName: FoodHandler, Assembly-CSharp
+        m_MethodName: AddRandomFoodItem
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1117752917}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.RectTransform, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3149,7 +3149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 156.87, y: -64}
+  m_AnchoredPosition: {x: 156.87, y: -64.000015}
   m_SizeDelta: {x: 103.73001, y: -253.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533050473

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class FoodHandler : MonoBehaviour
 {
@@ -18,7 +19,8 @@ public class FoodHandler : MonoBehaviour
     public int currentPage = 0;
     public Action<FoodItem> OnFeed;
 
-    public int MaxPage { get; private set; }
+    private int _maxPageAmount;
+    private int _maxPageCurrent;
 
 
     private void Awake()
@@ -39,6 +41,7 @@ public class FoodHandler : MonoBehaviour
     private void Init()
     {
         _cellPage = new List<FoodCell>();
+        _maxPageAmount = Mathf.CeilToInt((float) foodTypes.foodTypesList.Count / cellPageSize) - 1;
         for (int i = 0; i < cellPageSize; i++)
         {
             var go = Instantiate(foodCellPrefab, transform);
@@ -48,7 +51,7 @@ public class FoodHandler : MonoBehaviour
 
     private void ShowPage(int pageNumber)
     {
-        MaxPage = Mathf.FloorToInt((float) foodTypes.foodTypesList.Count / cellPageSize) - 1;
+        _maxPageCurrent = Mathf.CeilToInt((float) foodContainer.container.Count / cellPageSize) - 1;
         for (int i = 0; i < cellPageSize; i++)
         {
             try
@@ -81,7 +84,7 @@ public class FoodHandler : MonoBehaviour
             foodContainer.container.Remove(item);
             if (isPageEmpty && currentPage > 0)
             {
-                MaxPage--;
+                _maxPageCurrent--;
                 NextPage(-1);
             }
 
@@ -92,6 +95,8 @@ public class FoodHandler : MonoBehaviour
 
     public void AddRandomFoodItem()
     {
+        int itemNumber = Random.Range(0, foodTypes.foodTypesList.Count);
+        AddFood(new FoodItem(foodTypes.foodTypesList[itemNumber], 1));
     }
 
     private void AddFood(FoodItem item, int count = 1)
@@ -104,6 +109,8 @@ public class FoodHandler : MonoBehaviour
         {
             container.Add(item);
         }
+
+        ShowPage(currentPage);
     }
 
     public void NextPage(int side)
@@ -111,9 +118,9 @@ public class FoodHandler : MonoBehaviour
         int nextPage = currentPage + side;
         if (nextPage < 0)
         {
-            currentPage = MaxPage;
+            currentPage = _maxPageCurrent;
         }
-        else if (nextPage > MaxPage)
+        else if (nextPage > _maxPageCurrent)
             currentPage = 0;
         else
         {
@@ -127,6 +134,6 @@ public class FoodHandler : MonoBehaviour
     public void ShowButton()
     {
         prevButton.gameObject.SetActive(currentPage != 0);
-        nextButton.gameObject.SetActive(currentPage != MaxPage);
+        nextButton.gameObject.SetActive(currentPage != _maxPageCurrent);
     }
 }
